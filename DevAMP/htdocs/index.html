@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devamp - Local Development Server</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="/images/favicon.png">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#ef4136',
+                        'primary-dark': '#d63529',
+                        'primary-light': '#f56565',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <!-- Header -->
+    <header class="bg-white text-white shadow-lg">
+        <div class="max-w-6xl mx-auto px-4 py-6">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-4">
+                    <div class="flex-shrink-0">
+                        <h1 class="text-xl font-bold text-primary">
+                            <a href="/" class="mb-0.5 block">
+                                <img src="/images/logo.svg" width="100">
+                            </a>
+                        </h1>
+                        <p class="text-xs text-gray-500">PHP Development Stack</p>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-4">
+                    <div class="bg-gray-200 rounded-lg px-3 py-1">
+                        <span class="text-sm font-medium text-gray-600">🟢 Server Running</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-6xl mx-auto px-4 py-8">
+        <!-- Welcome Section -->
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Welcome to Your Local Development Server!
+            </h2>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                Congratulations! Devamp is successfully running on your system. Your complete PHP development environment 
+                is ready with Apache, PHP, MySQL, and all the tools you need to start building amazing web applications.
+            </p>
+        </div>
+
+        <!-- Status Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
+            <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 text-center">
+                <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <svg class="w-6 h-6 text-green-600" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2L2 7v10c0 5.55 3.84 9.74 9 11 5.16-1.26 9-5.45 9-11V7l-10-5z"/>
+                    </svg>
+                </div>
+                <h3 class="font-semibold text-gray-900 mb-1">Apache</h3>
+                <p class="text-sm text-green-600 font-medium">Running</p>
+            </div>
+            
+            <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 text-center">
+                <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <svg class="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                    </svg>
+                </div>
+                <h3 class="font-semibold text-gray-900 mb-1">PHP</h3>
+                <p class="text-sm text-blue-600 font-medium">8.3.x</p>
+            </div>
+            
+            <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 text-center">
+                <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <svg class="w-6 h-6 text-purple-600" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-1 9H9V9h10v2zm-4 4H9v-2h6v2zm4-8H9V5h10v2z"/>
+                    </svg>
+                </div>
+                <h3 class="font-semibold text-gray-900 mb-1">MySQL</h3>
+                <p class="text-sm text-purple-600 font-medium">8.0.x</p>
+            </div>
+            
+            <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 text-center">
+                <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <svg class="w-6 h-6 text-orange-600" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/>
+                    </svg>
+                </div>
+                <h3 class="font-semibold text-gray-900 mb-1">FileZilla</h3>
+                <p class="text-sm text-orange-600 font-medium">Ready</p>
+            </div>
+        </div>
+
+        <!-- Quick Access Tools -->
+        <div class="mb-12">
+            <h3 class="text-2xl font-bold text-gray-900 mb-6 text-center">Quick Access Tools</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- phpMyAdmin -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 card-hover">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
+                            <svg class="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-1 9H9V9h10v2zm-4 4H9v-2h6v2zm4-8H9V5h10v2z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-semibold text-gray-900">phpMyAdmin</h4>
+                            <p class="text-sm text-gray-600">Database Management</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4 text-sm">
+                        Manage your MySQL databases, create tables, run queries, and handle all database operations through an intuitive web interface.
+                    </p>
+                    <a href="/phpmyadmin" target="_blank" class="inline-flex items-center justify-center w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg font-medium transition-colors">
+                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                        </svg>
+                        Open phpMyAdmin
+                    </a>
+                </div>
+
+                <!-- PHP Info -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 card-hover">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mr-4">
+                            <svg class="w-6 h-6 text-purple-600" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M11,9H13V7H11M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M11,17H13V11H11V17Z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-semibold text-gray-900">PHP Info</h4>
+                            <p class="text-sm text-gray-600">System Information</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4 text-sm">
+                        View detailed information about your PHP installation, loaded extensions, configuration settings, and system environment.
+                    </p>
+                    <a href="/phpinfo.php" target="_blank" class="inline-flex items-center justify-center w-full bg-purple-600 hover:bg-purple-700 text-white py-2 px-4 rounded-lg font-medium transition-colors">
+                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                        </svg>
+                        View PHP Info
+                    </a>
+                </div>
+
+                <!-- Project Folder -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 card-hover">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4">
+                            <svg class="w-6 h-6 text-green-600" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M10,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V8C22,6.89 21.1,6 20,6H12L10,4Z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-semibold text-gray-900">Project Folder</h4>
+                            <p class="text-sm text-gray-600">htdocs Directory</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4 text-sm">
+                        Access your web root directory where you can place your PHP projects and files. This is where your websites live.
+                    </p>
+                    <button onclick="openFolder()" class="inline-flex items-center justify-center w-full bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-lg font-medium transition-colors">
+                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2z"></path>
+                        </svg>
+                        Open htdocs Folder
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Getting Started -->
+        <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-8 mb-12">
+            <h3 class="text-2xl font-bold text-gray-900 mb-6 text-center">Getting Started</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h4 class="text-lg font-semibold text-gray-900 mb-3">Create Your First Project</h4>
+                    <ol class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-start gap-2">
+                            <span class="bg-primary text-white rounded-full w-5 h-5 flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">1</span>
+                            Open the htdocs folder (C:\devamp\htdocs)
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="bg-primary text-white rounded-full w-5 h-5 flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">2</span>
+                            Create a new folder for your project
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="bg-primary text-white rounded-full w-5 h-5 flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">3</span>
+                            Add your PHP files (start with index.php)
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="bg-primary text-white rounded-full w-5 h-5 flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">4</span>
+                            Access via http://localhost/yourproject
+                        </li>
+                    </ol>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold text-gray-900 mb-3">Useful Paths</h4>
+                    <div class="space-y-3 text-sm">
+                        <div class="bg-gray-50 rounded-lg p-3">
+                            <div class="font-medium text-gray-900 mb-1">Web Root:</div>
+                            <code class="text-gray-600">C:\devamp\htdocs\</code>
+                        </div>
+                        <div class="bg-gray-50 rounded-lg p-3">
+                            <div class="font-medium text-gray-900 mb-1">PHP Config:</div>
+                            <code class="text-gray-600">C:\devamp\php\php.ini</code>
+                        </div>
+                        <div class="bg-gray-50 rounded-lg p-3">
+                            <div class="font-medium text-gray-900 mb-1">Apache Config:</div>
+                            <code class="text-gray-600">C:\devamp\apache\conf\httpd.conf</code>
+                        </div>
+                        <div class="bg-gray-50 rounded-lg p-3">
+                            <div class="font-medium text-gray-900 mb-1">MySQL Data:</div>
+                            <code class="text-gray-600">C:\devamp\mysql\data\</code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Links Section -->
+        <div class="bg-gradient-to-r from-primary to-primary-dark rounded-2xl text-white p-8 text-center">
+            <h3 class="text-2xl font-bold mb-4">Need Help or Want to Learn More?</h3>
+            <p class="text-red-100 mb-6 max-w-2xl mx-auto">
+                Visit the official Devamp website for documentation, tutorials, community support, and the latest updates.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="https://devamp.dev" target="_blank" class="bg-white text-primary hover:bg-gray-100 px-6 py-3 rounded-lg font-semibold transition-colors inline-flex items-center justify-center">
+                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9v-9m0-9v9"></path>
+                    </svg>
+                    Visit Devamp Website
+                </a>
+                <a href="https://github.com/devamp/devamp" target="_blank" class="border-2 border-white text-white hover:bg-white hover:text-primary px-6 py-3 rounded-lg font-semibold transition-colors inline-flex items-center justify-center">
+                    <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z"/>
+                    </svg>
+                    View on GitHub
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8 mt-12">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <div class="flex items-center justify-center mb-4">
+                <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center mr-3">
+                    <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2L2 7v10c0 5.55 3.84 9.74 9 11 5.16-1.26 9-5.45 9-11V7l-10-5z"/>
+                    </svg>
+                </div>
+                <span class="text-lg font-bold">Devamp</span>
+            </div>
+            <p class="text-gray-400 text-sm mb-2">
+                Open Source PHP Development Environment
+            </p>
+            <p class="text-gray-500 text-xs">
+                Licensed under MIT License • Made with ❤️ for developers
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        function openFolder() {
+            // This would typically be handled by the Devamp control panel
+            // For now, we'll show an alert with instructions
+            alert('To open the htdocs folder:\n\n1. Open File Explorer\n2. Navigate to C:\\devamp\\htdocs\n\nOr use the Devamp Control Panel to open the folder directly.');
+        }
+
+        // Check if services are actually running (this would be dynamic in a real implementation)
+        document.addEventListener('DOMContentLoaded', function() {
+            // You could add AJAX calls here to check actual service status
+            console.log('Devamp localhost page loaded successfully');
+        });
+    </script>
+</body>
+</html>
